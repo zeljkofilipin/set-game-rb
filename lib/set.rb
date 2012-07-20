@@ -1,3 +1,3 @@
-def sets_from_cards(cards)
 
 end
+def sets_for_cards(cards)

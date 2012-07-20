@@ -54,7 +54,7 @@ describe "the game of set" do
       ]
 
     require_relative "../lib/set"
-    sets_from_cards(cards).should == sets
+    sets_for_cards(cards).should == sets
   end
 end
 
