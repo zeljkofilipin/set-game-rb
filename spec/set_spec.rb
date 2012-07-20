@@ -22,6 +22,9 @@ describe "the game of set" do
         ["three", "green", "solid", "diamonds"]
       ]
   end
+  it "returns any 220 combinations for 12 cards" do
+    combinations_for_cards(@cards).size.should == 220
+  end
   it "returns 6 sets of 3 cards for valid game with 12 cards" do
     sets =
       [
@@ -60,5 +63,3 @@ describe "the game of set" do
     sets_for_cards(@cards).should == sets
   end
 end
-
-
