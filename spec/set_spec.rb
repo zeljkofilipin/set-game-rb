@@ -1,5 +1,8 @@
 describe "the game of set" do
   it "returns 6 sets of 3 cards for valid game with 12 cards" do
+  before :all do
+    require_relative "../lib/set"
+  end
     # screenshot of the game is at misc/1.png
     cards =
       [
@@ -53,7 +56,6 @@ describe "the game of set" do
         ],
       ]
 
-    require_relative "../lib/set"
     sets_for_cards(cards).should == sets
   end
 end
