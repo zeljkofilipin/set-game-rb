@@ -726,4 +726,22 @@ describe "the game of set" do
 
     sets_for_cards(@cards).should == sets
   end
+  it "knows if 3 cards are a valid set" do
+    cards =
+      [
+        ["one",   "purple", "empty", "diamond"],
+        ["two",   "purple", "empty", "diamonds"],
+        ["three", "purple", "empty", "diamonds"],
+      ]
+    valid_set?(cards).should == true
+  end
+  it "knows if 3 cards are not a valid set" do
+    cards =
+      [
+        ["one",   "purple", "empty", "diamond"],
+        ["one",   "purple", "empty", "diamond"],
+        ["three", "purple", "empty", "diamonds"],
+      ]
+    valid_set?(cards).should == false
+  end
 end
