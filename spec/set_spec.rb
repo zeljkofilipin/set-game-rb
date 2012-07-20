@@ -22,6 +22,7 @@ describe "the game of set" do
         ["three", "green", "solid", "diamonds"]
       ]
   end
+  it "returns 6 sets of 3 cards for valid game with 12 cards" do
     sets =
       [
         [
