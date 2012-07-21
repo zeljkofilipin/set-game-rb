@@ -59,7 +59,7 @@ describe "the game of set" do
       ]
 
     pending "not implemented" do
-      sets_for_cards(@cards).should == sets
+      SetGame::Set.sets(@cards).should == sets
     end
   end
   it "knows if 3 cards are a valid set" do
