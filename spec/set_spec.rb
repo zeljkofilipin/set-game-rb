@@ -102,4 +102,14 @@ describe SetGame::Set do
     SetGame::Set.feature_different_for_all_cards(:count, cards).should == true
     SetGame::Set.feature_different_for_all_cards(:color, cards).should == false
   end
+  it "knows if one feature of a set is either the same or different for all cards" do
+    cards =
+      [
+        {:count=>"one",   :color=>"red",    :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+      ]
+    SetGame::Set.feature_the_same_or_different_for_all_cards?(:count, cards).should == true
+    SetGame::Set.feature_the_same_or_different_for_all_cards?(:color, cards).should == false
+    SetGame::Set.feature_the_same_or_different_for_all_cards?(:fill, cards).should == true
+  end
 end
