@@ -53,7 +53,7 @@ describe SetGame::Game do
         {:count=>"one", :color=>"purple", :fill=>"empty", :shape=>"oval"}
       ]
 
-    SetGame::Game.new.strings_to_cards(strings).should == cards
+    SetGame::Game.strings_to_cards(strings).should == cards
   end
   it "returns any 220 combinations for 12 cards" do
     SetGame::Game.combinations_for_cards(@cards).size.should == 220
