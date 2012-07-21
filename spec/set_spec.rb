@@ -70,7 +70,7 @@ describe "the game of set" do
         ["three", "purple", "empty", "diamonds"],
       ]
     pending "not implemented" do
-      valid_set?(cards).should == true
+      SetGame::Set.valid?(cards).should == true
     end
   end
   it "knows if 3 cards are not a valid set" do
@@ -81,7 +81,7 @@ describe "the game of set" do
         ["three", "purple", "empty", "diamonds"],
       ]
     pending "not implemented" do
-      valid_set?(cards).should == false
+      SetGame::Set.valid?(cards).should == false
     end
   end
 end
