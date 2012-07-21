@@ -82,4 +82,14 @@ describe SetGame::Set do
       SetGame::Set.valid?(cards).should == false
     end
   end
+  it "knows if one feature of a set is the same" do
+    cards =
+      [
+        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+      ]
+    SetGame::Set.feature_the_same_for_all_cards(:count, cards).should == false
+    SetGame::Set.feature_the_same_for_all_cards(:color, cards).should == true
+  end
 end
