@@ -63,24 +63,20 @@ describe SetGame::Set do
   it "knows if 3 cards are a valid set" do
     cards =
       [
-        ["one",   "purple", "empty", "diamond"],
-        ["two",   "purple", "empty", "diamonds"],
-        ["three", "purple", "empty", "diamonds"],
+        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"two",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
       ]
-    pending "not implemented" do
-      SetGame::Set.valid?(cards).should == true
-    end
+    SetGame::Set.valid?(cards).should == true
   end
   it "knows if 3 cards are not a valid set" do
     cards =
       [
-        ["one",   "purple", "empty", "diamond"],
-        ["one",   "purple", "empty", "diamond"],
-        ["three", "purple", "empty", "diamonds"],
+        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
       ]
-    pending "not implemented" do
-      SetGame::Set.valid?(cards).should == false
-    end
+    SetGame::Set.valid?(cards).should == false
   end
   it "knows if one feature of a set is the same for all cards" do
     cards =
@@ -106,6 +102,7 @@ describe SetGame::Set do
     cards =
       [
         {:count=>"one",   :color=>"red",    :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"two",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
         {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
       ]
     SetGame::Set.feature_the_same_or_different_for_all_cards?(:count, cards).should == true
