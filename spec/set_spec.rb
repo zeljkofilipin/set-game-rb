@@ -1,7 +1,5 @@
-describe "the game of set" do
-  before :all do
-    require_relative "../lib/set"
-  end
+require_relative "../lib/set"
+describe SetGame::Set do
   before :each do
     # screenshot of the game is at misc/1.png
     @cards =
