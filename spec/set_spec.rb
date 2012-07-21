@@ -735,7 +735,9 @@ describe "the game of set" do
         ["two",   "purple", "empty", "diamonds"],
         ["three", "purple", "empty", "diamonds"],
       ]
-    valid_set?(cards).should == true
+    pending "not implemented" do
+      valid_set?(cards).should == true
+    end
   end
   it "knows if 3 cards are not a valid set" do
     cards =
@@ -744,6 +746,8 @@ describe "the game of set" do
         ["one",   "purple", "empty", "diamond"],
         ["three", "purple", "empty", "diamonds"],
       ]
-    valid_set?(cards).should == false
+    pending "not implemented" do
+      valid_set?(cards).should == false
+    end
   end
 end
