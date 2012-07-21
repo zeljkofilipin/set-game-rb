@@ -1,8 +1,8 @@
 module SetGame
   class Set
-    def self.valid?(cards)
-    end
     def self.sets(cards)
+    end
+    def self.valid?(cards)
     end
   end
 end
