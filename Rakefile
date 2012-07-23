@@ -1,6 +1,6 @@
 require "bundler/setup"
 
-desc "Run RSpec code examples"
+desc "play the game"
 task :default => :play
 
 require "rspec/core/rake_task"
