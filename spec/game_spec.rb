@@ -21,9 +21,6 @@ describe SetGame::Game do
       ]
   end
 
-  it "returns any 220 combinations for 12 cards" do
-    SetGame::Game.combinations_for_cards(@cards).size.should == 220
-  end
   it "returns correct 220 combinations for 12 cards" do
     combinations =
         [[["two", "red", "empty", "diamonds"],

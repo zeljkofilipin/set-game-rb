@@ -9,5 +9,9 @@ module SetGame
         card(string)
       end
     end
+    def self.combinations(strings)
+      cards = strings.each {|string| string.split " "}
+      cards.combination(3).to_a
+    end
   end
 end

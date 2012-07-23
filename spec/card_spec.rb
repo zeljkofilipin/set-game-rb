@@ -1,12 +1,7 @@
 require_relative "../lib/card"
 describe SetGame::Card do
-  it "creates card from string" do
-    string = "three purple solid squiggles"
-    card = {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"}
-    SetGame::Card.card(string).should == card
-  end
-  it "creates cards from strings" do
-    strings =
+  before :each do
+    @strings =
       [
         "three purple solid squiggles",
         "two green shaded diamonds",
@@ -21,6 +16,13 @@ describe SetGame::Card do
         "one green shaded oval",
         "one purple empty oval"
       ]
+  end
+  it "creates card from string" do
+    string = @strings[0]
+    card = {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"}
+    SetGame::Card.card(string).should == card
+  end
+  it "creates cards from strings" do
     cards =
       [
         {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
@@ -37,6 +39,9 @@ describe SetGame::Card do
         {:count=>"one", :color=>"purple", :fill=>"empty", :shape=>"oval"}
       ]
 
-    SetGame::Card.cards(strings).should == cards
+    SetGame::Card.cards(@strings).should == cards
+  end
+  it "returns any 220 combinations for 12 cards" do
+    SetGame::Card.combinations(@strings).size.should == 220
   end
 end
