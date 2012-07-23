@@ -1,10 +1,10 @@
 module SetGame
   class Set
     def self.feature_different_for_all_cards(feature, cards)
-      cards.collect {|card| card[feature]}.uniq.size == 3
+      cards.collect {|card| card[feature].chomp("s")}.uniq.size == 3
     end
     def self.feature_the_same_for_all_cards(feature, cards)
-      cards.collect {|card| card[feature]}.uniq.size == 1
+      cards.collect {|card| card[feature].chomp("s")}.uniq.size == 1
     end
     def self.feature_the_same_or_different_for_all_cards?(feature, cards)
       feature_the_same_for_all_cards(feature, cards) or feature_different_for_all_cards(feature, cards)

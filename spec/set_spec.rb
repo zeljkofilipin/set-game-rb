@@ -63,7 +63,7 @@ describe SetGame::Set do
   it "knows if 3 cards are a valid set" do
     cards =
       [
-        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggle"},
         {:count=>"two",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
         {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
       ]
@@ -72,8 +72,8 @@ describe SetGame::Set do
   it "knows if 3 cards are not a valid set" do
     cards =
       [
-        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
-        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggle"},
+        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggle"},
         {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
       ]
     SetGame::Set.valid?(cards).should == false
@@ -81,27 +81,29 @@ describe SetGame::Set do
   it "knows if one feature of a set is the same for all cards" do
     cards =
       [
-        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggle"},
         {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
         {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
       ]
     SetGame::Set.feature_the_same_for_all_cards(:count, cards).should == false
     SetGame::Set.feature_the_same_for_all_cards(:color, cards).should == true
+    SetGame::Set.feature_the_same_for_all_cards(:shape, cards).should == true
   end
   it "knows if one feature of a set is different for all cards" do
     cards =
       [
-        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"one",   :color=>"purple", :fill=>"solid", :shape=>"squiggle"},
         {:count=>"two",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
         {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
       ]
     SetGame::Set.feature_different_for_all_cards(:count, cards).should == true
     SetGame::Set.feature_different_for_all_cards(:color, cards).should == false
+    SetGame::Set.feature_different_for_all_cards(:shape, cards).should == false
   end
   it "knows if one feature of a set is either the same or different for all cards" do
     cards =
       [
-        {:count=>"one",   :color=>"red",    :fill=>"solid", :shape=>"squiggles"},
+        {:count=>"one",   :color=>"red",    :fill=>"solid", :shape=>"squiggle"},
         {:count=>"two",   :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
         {:count=>"three", :color=>"purple", :fill=>"solid", :shape=>"squiggles"},
       ]
