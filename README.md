@@ -12,4 +12,5 @@ Install required RubyGems:
     gem install bundler
     bundle
 
-Run tests with `bundle exec rake`
+Run tests with `bundle exec rake spec`.
+Play the game with `bundle exec rake`.
