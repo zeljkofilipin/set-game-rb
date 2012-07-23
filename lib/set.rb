@@ -10,6 +10,12 @@ module SetGame
       feature_the_same_for_all_cards(feature, cards) or feature_different_for_all_cards(feature, cards)
     end
     def self.sets(cards)
+      require_relative "card"
+      combinations = SetGame::Card.combinations(cards)
+      combinations.collect do |set|
+        cards = SetGame::Card.cards(set)
+        cards if valid?(cards)
+      end.compact
     end
     def self.valid?(cards)
       features = [:count, :color, :fill, :shape]

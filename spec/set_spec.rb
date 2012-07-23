@@ -5,58 +5,41 @@ describe SetGame::Set do
     # screenshot of the game is at misc/1.png
     cards =
       [
-        ["two red empty diamonds"],
-        ["three green empty diamonds"],
-        ["one purple empty squiggle"],
-        ["two red empty ovals"],
+        "two red empty diamonds",
+        "three green empty diamonds",
+        "one purple empty squiggle",
+        "two red empty ovals",
 
-        ["two green solid ovals"],
-        ["one purple shaded squiggle"],
-        ["one purple empty diamond"],
-        ["two red shaded ovals"],
+        "two green solid ovals",
+        "one purple shaded squiggle",
+        "one purple empty diamond",
+        "two red shaded ovals",
 
-        ["two green shaded ovals"],
-        ["one purple solid oval"],
-        ["one green empty squiggle"],
-        ["three green solid diamonds"]
+        "two green shaded ovals",
+        "one purple solid oval",
+        "one green empty squiggle",
+        "three green solid diamonds",
       ]
     sets =
-      [
-        [
-          ["two red empty diamonds"],
-          ["three green empty diamonds"],
-          ["one purple empty diamond"],
-        ],
-        [
-          ["one purple solid oval"],
-          ["one purple shaded squiggle"],
-          ["one purple empty diamond"],
-        ],
-        [
-          ["one green empty squiggle"],
-          ["three green solid diamonds"],
-          ["two red shaded ovals"],
-        ],
-        [
-          ["three green solid diamonds"],
-          ["two red empty ovals"],
-          ["one purple shaded squiggle"],
-        ],
-        [
-          ["three green empty diamonds"],
-          ["one purple empty squiggle"],
-          ["two red empty ovals"],
-        ],
-        [
-          ["three green solid diamonds"],
-          ["one purple empty squiggle"],
-          ["two red shaded ovals"],
-        ],
-      ]
-
-    pending "not implemented" do
-      SetGame::Set.sets(cards).should == sets
-    end
+      [[{:count=>"two", :color=>"red", :fill=>"empty", :shape=>"diamonds"},
+        {:count=>"three", :color=>"green", :fill=>"empty", :shape=>"diamonds"},
+        {:count=>"one", :color=>"purple", :fill=>"empty", :shape=>"diamond"}],
+       [{:count=>"three", :color=>"green", :fill=>"empty", :shape=>"diamonds"},
+        {:count=>"one", :color=>"purple", :fill=>"empty", :shape=>"squiggle"},
+        {:count=>"two", :color=>"red", :fill=>"empty", :shape=>"ovals"}],
+       [{:count=>"one", :color=>"purple", :fill=>"empty", :shape=>"squiggle"},
+        {:count=>"two", :color=>"red", :fill=>"shaded", :shape=>"ovals"},
+        {:count=>"three", :color=>"green", :fill=>"solid", :shape=>"diamonds"}],
+       [{:count=>"two", :color=>"red", :fill=>"empty", :shape=>"ovals"},
+        {:count=>"one", :color=>"purple", :fill=>"shaded", :shape=>"squiggle"},
+        {:count=>"three", :color=>"green", :fill=>"solid", :shape=>"diamonds"}],
+       [{:count=>"one", :color=>"purple", :fill=>"shaded", :shape=>"squiggle"},
+        {:count=>"one", :color=>"purple", :fill=>"empty", :shape=>"diamond"},
+        {:count=>"one", :color=>"purple", :fill=>"solid", :shape=>"oval"}],
+       [{:count=>"two", :color=>"green", :fill=>"shaded", :shape=>"ovals"},
+        {:count=>"one", :color=>"green", :fill=>"empty", :shape=>"squiggle"},
+        {:count=>"three", :color=>"green", :fill=>"solid", :shape=>"diamonds"}]]
+    SetGame::Set.sets(cards).should == sets
   end
   it "knows if 3 cards are a valid set" do
     cards =
