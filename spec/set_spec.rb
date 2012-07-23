@@ -1,8 +1,9 @@
 require_relative "../lib/set"
 describe SetGame::Set do
-  before :each do
+
+  it "returns 6 sets of 3 cards for valid game with 12 cards" do
     # screenshot of the game is at misc/1.png
-    @cards =
+    cards =
       [
         ["two", "red", "empty", "diamonds"],
         ["three", "green", "empty", "diamonds"],
@@ -19,9 +20,6 @@ describe SetGame::Set do
         ["one", "green", "empty", "squiggle"],
         ["three", "green", "solid", "diamonds"]
       ]
-  end
-
-  it "returns 6 sets of 3 cards for valid game with 12 cards" do
     sets =
       [
         [
@@ -57,7 +55,7 @@ describe SetGame::Set do
       ]
 
     pending "not implemented" do
-      SetGame::Set.sets(@cards).should == sets
+      SetGame::Set.sets(cards).should == sets
     end
   end
   it "knows if 3 cards are a valid set" do
