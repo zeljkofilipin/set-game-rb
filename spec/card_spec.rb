@@ -38,7 +38,6 @@ describe SetGame::Card do
         {:count=>"one", :color=>"green", :fill=>"shaded", :shape=>"oval"},
         {:count=>"one", :color=>"purple", :fill=>"empty", :shape=>"oval"}
       ]
-
     SetGame::Card.cards(@strings).should == cards
   end
   it "returns any 220 combinations for 12 cards" do
