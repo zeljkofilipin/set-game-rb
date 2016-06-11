@@ -1,5 +1,8 @@
 require "bundler/setup"
 
+require 'rubocop/rake_task'
+RuboCop::RakeTask.new
+
 desc "run all tasks"
 task :default => [:spec]
 
