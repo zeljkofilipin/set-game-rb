@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
+# My machine has ruby 2.2.4, but travis has 2.2.0
 # ruby '2.2.4'
+# ruby '2.2.0'
 
 gem 'rake', '~> 11.2'
 gem 'rspec', '~> 3.4'
