@@ -1,18 +1,18 @@
-# Automating The Set Game
+# Playing Set game with Ruby and Selenium
 
-The game is located at http://thebreretons.com/setgame/
+## Usage
 
-Project repository is at https://github.com/zeljkofilipin/set
-
-Tested with Ruby 1.9.3p194.
-
-Install required RubyGems:
-
-    gem update --system
     gem install bundler
-    bundle
+    bundle install
+    bundle exec rake
 
-Play the game with `bundle exec rake`.
-Run tests with `bundle exec rake spec`.
+## Links
 
-For more information see http://filipin.eu/automating-the-set-game/
+- https://en.wikipedia.org/wiki/Set_%28game%29
+- http://smart-games.org/en/set_classic/start/10
+- https://github.com/zeljkofilipin/set-game-rb
+- http://filipin.eu/automating-the-set-game
+- https://youtu.be/4FMB55f3bYI
+- https://github.com/zeljkofilipin/set-game-js
+
+[![Build Status](https://travis-ci.org/zeljkofilipin/set-game-rb.svg?branch=master)](https://travis-ci.org/zeljkofilipin/set-game-rb)
