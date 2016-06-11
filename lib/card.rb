@@ -1,7 +1,7 @@
 module SetGame
   class Card
     def self.card(string)
-      features = string.split " "
+      features = string.split ' '
       { count: features[0], color: features[1], fill: features[2], shape: features[3] }
     end
 
@@ -12,7 +12,7 @@ module SetGame
     end
 
     def self.combinations(strings)
-      cards = strings.each { |string| string.split " " }
+      cards = strings.each { |string| string.split ' ' }
       cards.combination(3).to_a
     end
   end
