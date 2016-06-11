@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby '2.2.4'
+#ruby '2.2.4'
 
 gem 'rake', '~> 11.2'
 gem 'rspec', '~> 3.4'
