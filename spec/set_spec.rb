@@ -1,6 +1,5 @@
 require_relative "../lib/set"
 describe SetGame::Set do
-
   it "returns 6 sets of 3 cards for valid game with 12 cards" do
     # screenshot of the game is at misc/1.png
     cards =
