@@ -11,7 +11,7 @@ module SetGame
       cards.collect { |card| card[feature].chomp("s")}.uniq.size == 1
     end
     def self.feature_the_same_or_different_for_all_cards?(feature, strings)
-      feature_the_same_for_all_cards(feature, strings) or feature_different_for_all_cards(feature, strings)
+      feature_the_same_for_all_cards(feature, strings) || feature_different_for_all_cards(feature, strings)
     end
     def self.sets(cards)
       require_relative "card"

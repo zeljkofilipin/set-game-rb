@@ -17,14 +17,6 @@ Lint/Void:
 Metrics/LineLength:
   Max: 107
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: always, conditionals
-Style/AndOr:
-  Exclude:
-    - 'lib/set.rb'
-
 # Offense count: 2
 Style/Documentation:
   Exclude:
