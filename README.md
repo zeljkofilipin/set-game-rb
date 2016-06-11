@@ -13,6 +13,5 @@
 - https://github.com/zeljkofilipin/set-game-rb
 - http://filipin.eu/automating-the-set-game
 - https://youtu.be/4FMB55f3bYI
-- https://github.com/zeljkofilipin/set-game-js
 
 [![Build Status](https://travis-ci.org/zeljkofilipin/set-game-rb.svg?branch=master)](https://travis-ci.org/zeljkofilipin/set-game-rb)
