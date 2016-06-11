@@ -25,13 +25,6 @@ Style/Documentation:
     - 'lib/card.rb'
     - 'lib/set.rb'
 
-# Offense count: 52
-# Cop supports --auto-correct.
-# Configuration parameters: AllowForAlignment.
-Style/SpaceAroundOperators:
-  Exclude:
-    - 'spec/card_spec.rb'
-
 # Offense count: 8
 # Cop supports --auto-correct.
 # Configuration parameters: SupportedStyles, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
