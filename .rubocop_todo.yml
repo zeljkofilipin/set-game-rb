@@ -25,13 +25,6 @@ Style/Documentation:
     - 'lib/card.rb'
     - 'lib/set.rb'
 
-# Offense count: 53
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, UseHashRocketsWithSymbolValues.
-# SupportedStyles: ruby19, ruby19_no_mixed_keys, hash_rockets
-Style/HashSyntax:
-  Enabled: false
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Style/LeadingCommentSpace:
