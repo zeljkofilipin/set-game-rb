@@ -17,7 +17,7 @@ task :play do
 
   puts "cards"
   require "pp"
-  pp strings = browser.imgs(id: /^card?/).collect { |img| img.alt}
+  pp strings = browser.imgs(id: /^card?/).collect { |img| img.alt }
 
   puts "\nsets"
   require_relative "lib/set"
