@@ -23,7 +23,7 @@ describe SetGame::Card do
              color: 'purple',
              fill: 'solid',
              shape: 'squiggles' }
-    SetGame::Card.card(string).should == card
+    expect(SetGame::Card.card(string)).to eq(card)
   end
   it 'creates cards from strings' do
     cards =
@@ -41,10 +41,10 @@ describe SetGame::Card do
         { count: 'one', color: 'green', fill: 'shaded', shape: 'oval' },
         { count: 'one', color: 'purple', fill: 'empty', shape: 'oval' }
       ]
-    SetGame::Card.cards(@strings).should == cards
+    expect(SetGame::Card.cards(@strings)).to eq(cards)
   end
   it 'returns any 220 combinations for 12 cards' do
-    SetGame::Card.combinations(@strings).size.should == 220
+    expect(SetGame::Card.combinations(@strings).size).to eq(220)
   end
   it 'returns correct 220 combinations for 12 cards' do
     combinations =
@@ -708,6 +708,6 @@ describe SetGame::Card do
        ['three red shaded ovals',
         'one green shaded oval',
         'one purple empty oval']]
-    SetGame::Card.combinations(@strings).should == combinations
+    expect(SetGame::Card.combinations(@strings)).to eq(combinations)
   end
 end
