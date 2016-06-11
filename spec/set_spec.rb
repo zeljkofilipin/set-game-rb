@@ -17,7 +17,7 @@ describe SetGame::Set do
         'two green shaded ovals',
         'one purple solid oval',
         'one green empty squiggle',
-        'three green solid diamonds',
+        'three green solid diamonds'
       ]
     sets =
       [['two red empty diamonds',
@@ -45,7 +45,7 @@ describe SetGame::Set do
       [
         'one purple solid squiggle',
         'two purple solid squiggles',
-        'three purple solid squiggles',
+        'three purple solid squiggles'
       ]
     SetGame::Set.valid?(cards).should == true
   end
@@ -54,7 +54,7 @@ describe SetGame::Set do
       [
         'one purple solid squiggle',
         'one purple solid squiggle',
-        'three purple solid squiggles',
+        'three purple solid squiggles'
       ]
     SetGame::Set.valid?(cards).should == false
   end
@@ -63,7 +63,7 @@ describe SetGame::Set do
       [
         'one purple solid squiggle',
         'three purple solid squiggles',
-        'three purple solid squiggles',
+        'three purple solid squiggles'
       ]
     SetGame::Set.feature_the_same_for_all_cards(:count, cards).should == false
     SetGame::Set.feature_the_same_for_all_cards(:color, cards).should == true
@@ -74,7 +74,7 @@ describe SetGame::Set do
       [
         'one purple solid squiggle',
         'two purple solid squiggles',
-        'three purple solid squiggles',
+        'three purple solid squiggles'
       ]
     SetGame::Set.feature_different_for_all_cards(:count, cards).should == true
     SetGame::Set.feature_different_for_all_cards(:color, cards).should == false
@@ -85,7 +85,7 @@ describe SetGame::Set do
       [
         'one red solid squiggle',
         'two purple solid squiggles',
-        'three purple solid squiggles',
+        'three purple solid squiggles'
       ]
     SetGame::Set.feature_the_same_or_different_for_all_cards?(:count, cards).should == true
     SetGame::Set.feature_the_same_or_different_for_all_cards?(:color, cards).should == false
