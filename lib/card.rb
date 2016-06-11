@@ -1,4 +1,5 @@
 module SetGame
+  # Card class is all about cards
   class Card
     def self.card(string)
       features = string.split ' '

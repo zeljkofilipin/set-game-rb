@@ -10,11 +10,3 @@
 Lint/Void:
   Exclude:
     - 'spec/set_spec.rb'
-
-# Offense count: 2
-Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'lib/card.rb'
-    - 'lib/set.rb'

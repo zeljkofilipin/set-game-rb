@@ -1,4 +1,5 @@
 module SetGame
+  # Set class is all about sets
   class Set
     def self.feature_different_for_all_cards(feature, strings)
       require_relative 'card'
