@@ -89,10 +89,10 @@ describe SetGame::Set do
         'three purple solid squiggles'
       ]
     expect(SetGame::Set.feature_the_same_or_different_for_all_cards?(:count, cards))
-                .to eq(true)
+      .to eq(true)
     expect(SetGame::Set.feature_the_same_or_different_for_all_cards?(:color, cards))
-                .to eq(false)
+      .to eq(false)
     expect(SetGame::Set.feature_the_same_or_different_for_all_cards?(:fill, cards))
-                .to eq(true)
+      .to eq(true)
   end
 end
