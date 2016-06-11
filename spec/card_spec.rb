@@ -19,7 +19,10 @@ describe SetGame::Card do
   end
   it 'creates card from string' do
     string = @strings[0]
-    card = { count: 'three', color: 'purple', fill: 'solid', shape: 'squiggles' }
+    card = { count: 'three',
+             color: 'purple',
+             fill: 'solid',
+             shape: 'squiggles' }
     SetGame::Card.card(string).should == card
   end
   it 'creates cards from strings' do

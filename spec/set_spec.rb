@@ -80,15 +80,19 @@ describe SetGame::Set do
     SetGame::Set.feature_different_for_all_cards(:color, cards).should == false
     SetGame::Set.feature_different_for_all_cards(:shape, cards).should == false
   end
-  it 'knows if one feature of a set is either the same or different for all cards' do
+  it 'knows if one feature of a set is either the same or different for all'\
+     ' cards' do
     cards =
       [
         'one red solid squiggle',
         'two purple solid squiggles',
         'three purple solid squiggles'
       ]
-    SetGame::Set.feature_the_same_or_different_for_all_cards?(:count, cards).should == true
-    SetGame::Set.feature_the_same_or_different_for_all_cards?(:color, cards).should == false
-    SetGame::Set.feature_the_same_or_different_for_all_cards?(:fill, cards).should == true
+    SetGame::Set.feature_the_same_or_different_for_all_cards?(:count, cards)
+                .should == true
+    SetGame::Set.feature_the_same_or_different_for_all_cards?(:color, cards)
+                .should == false
+    SetGame::Set.feature_the_same_or_different_for_all_cards?(:fill, cards)
+                .should == true
   end
 end

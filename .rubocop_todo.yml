@@ -11,12 +11,6 @@ Lint/Void:
   Exclude:
     - 'spec/set_spec.rb'
 
-# Offense count: 8
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes.
-# URISchemes: http, https
-Metrics/LineLength:
-  Max: 107
-
 # Offense count: 2
 Style/Documentation:
   Exclude:

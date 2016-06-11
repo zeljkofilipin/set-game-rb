@@ -13,7 +13,8 @@ module SetGame
     end
 
     def self.feature_the_same_or_different_for_all_cards?(feature, strings)
-      feature_the_same_for_all_cards(feature, strings) || feature_different_for_all_cards(feature, strings)
+      feature_the_same_for_all_cards(feature, strings) ||
+        feature_different_for_all_cards(feature, strings)
     end
 
     def self.sets(cards)
