@@ -1,7 +1,7 @@
 require "bundler/setup"
 
-desc "play the game"
-task :default => :play
+desc "run all tasks"
+task :default => [:spec]
 
 require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new
