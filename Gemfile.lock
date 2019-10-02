@@ -2,10 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.3.0)
-    childprocess (0.5.9)
-      ffi (~> 1.0, >= 1.0.11)
+    childprocess (2.0.0)
+      rake (< 13.0)
     diff-lcs (1.2.5)
-    ffi (1.9.10)
     parser (2.3.1.2)
       ast (~> 2.2)
     powerpack (0.1.1)
@@ -31,15 +30,13 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.8.1)
-    rubyzip (1.2.0)
-    selenium-webdriver (2.53.1)
-      childprocess (~> 0.5)
-      rubyzip (~> 1.0)
-      websocket (~> 1.0)
+    rubyzip (2.0.0)
+    selenium-webdriver (3.142.5)
+      childprocess (>= 0.5, < 3.0)
+      rubyzip (>= 1.2.2)
     unicode-display_width (1.0.5)
     watir-webdriver (0.9.1)
       selenium-webdriver (>= 2.46.2)
-    websocket (1.2.3)
 
 PLATFORMS
   ruby
