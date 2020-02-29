@@ -6,5 +6,5 @@ source 'https://rubygems.org'
 
 gem 'rake', '~> 12.3'
 gem 'rspec', '~> 3.4'
-gem 'rubocop', '~> 0.40.0', require: false
+gem 'rubocop', '~> 0.48.1', require: false
 gem 'watir-webdriver', '~> 0.9.1'
