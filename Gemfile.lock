@@ -1,12 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    ast (2.4.0)
+    ast (2.4.2)
     childprocess (3.0.0)
     diff-lcs (1.2.5)
-    parser (2.7.0.3)
-      ast (~> 2.4.0)
-    powerpack (0.1.2)
+    parallel (1.23.0)
+    parser (2.7.2.0)
+      ast (~> 2.4.1)
+    powerpack (0.1.3)
     rainbow (2.2.2)
       rake
     rake (12.3.3)
@@ -23,18 +24,19 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
-    rubocop (0.48.1)
+    rubocop (0.49.0)
+      parallel (~> 1.10)
       parser (>= 2.3.3.1, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    ruby-progressbar (1.10.1)
+    ruby-progressbar (1.13.0)
     rubyzip (2.2.0)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
-    unicode-display_width (1.6.1)
+    unicode-display_width (1.8.0)
     watir-webdriver (0.9.1)
       selenium-webdriver (>= 2.46.2)
 
@@ -44,7 +46,7 @@ PLATFORMS
 DEPENDENCIES
   rake (~> 12.3)
   rspec (~> 3.4)
-  rubocop (~> 0.48.1)
+  rubocop (~> 0.49.0)
   watir-webdriver (~> 0.9.1)
 
 BUNDLED WITH
